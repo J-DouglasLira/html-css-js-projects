@@ -5,6 +5,46 @@
 }
 
 body {
+  background: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Poppins", sans-serif;
   margin: 0;
+  min-height: 100vh;
+}
+
+.quiz-container{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px rgba(100,100,100,0.1);
+  width: 400px;
+  overflow: hidden; /* prevents scrollbars from showing up*/
+  max-width: 100%; /* to make responsive*/
+
+}
+
+.quiz-header{
+  padding: 4rem; 
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+button{
+  background: #8e44ad;
+  border:none;
+  color: white; /* text color*/
+  font-size: 1rem; 
+  cursor: pointer;
+  display: block; /* display an element as a block element*/
+  font-family: inherit;
+  width: 100%;
+  padding: 1.4rem;
+}
+
+button:hover{
+  background-color: rgb(36, 34, 34);
 }
