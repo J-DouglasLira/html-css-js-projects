@@ -12,9 +12,6 @@ function countdown(){
   const days = Math.floor(totalSeconds/86400);
 
   
-  console.log(days,hours,mins,secs);
-
-
 }
 //initial call 
 
