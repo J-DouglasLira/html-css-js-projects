@@ -53,8 +53,22 @@ const submitButton = document.getElementById('submit');
 
 
 let currentQuiz = 0;
+let answer = undefined;
 
 loadQuiz();
+
+function getSelected() {
+  const answerEl = document.querySelectorAll(".answer");
+  answerEl.forEach(answerEl=> {
+    if(answerEl.checked) {
+      return answerEl.id;
+    }
+
+  });
+  return undefined;
+}
+
+
 
 
 function loadQuiz() {
@@ -64,14 +78,20 @@ function loadQuiz() {
   b_text.innerText = currentQuizData.b;
   c_text.innerText = currentQuizData.c;
   d_text.innerText = currentQuizData.d;
-  
 }
 
 submitButton.addEventListener("click", ()=> {
   currentQuiz++;
-  if(currentQuiz<QUIZ_DATA.length){
-    loadQuiz();
-  } else {
-    alert('You finished');
+  const answer = getElementById();
+  if (answer){
+    if(currentQuiz<QUIZ_DATA.length ){
+      loadQuiz();
+      
+    } else {
+      alert('You finished');
+    }
+    
   }
+  //currentQuiz<QUIZ_DATA.length? loadQuiz(): alert('You finished')
+  
 })
