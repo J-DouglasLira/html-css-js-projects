@@ -46,7 +46,7 @@ button{
 }
 
 button:hover{
-  background-color: rgb(36, 34, 34);
+  background-color: #732d91;
 }
 
 ul li  {
@@ -57,4 +57,16 @@ ul li  {
 
 ul li label{
   cursor: pointer;
+}
+
+
+h2{
+  padding: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+button:focus {
+  background-color: #9713d0;
+  outline: none;
 }

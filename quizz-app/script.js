@@ -42,6 +42,10 @@ const QUIZ_DATA = [
 ]
 
 
+const quiz = document.getElementById('quiz');
+
+
+
 
 const answerEls = document.querySelectorAll('.answer');
 const questionEl = document.getElementById("question")
@@ -66,6 +70,11 @@ function getSelected(){
   return answer;
 }
 
+function deselectAnswer(){
+  answerEls.forEach((answerEls) => {
+    answerEls.checked = false;
+  })
+}
 
 
 
@@ -89,7 +98,12 @@ submitButton.addEventListener("click",()=>{
     if(currentQuiz<QUIZ_DATA.length){
       loadQuiz();
     } else {
-      alert('You finished!');
+      quiz.innerHTML = 
+      `<h2>You answered correctly to at ${score}/
+        ${QUIZ_DATA.length}
+        </h2> <button onClick="location.reload()">Reload
+        </button>
+      `
     }
   }
 })
